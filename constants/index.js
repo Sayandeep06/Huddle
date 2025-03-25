@@ -20,9 +20,4 @@ export const navLinks = [
       route: '/recordings',
       label: 'Recordings',
     },
-    {
-      imgURL: '/assets/room.svg',
-      route: '/my-room',
-      label: 'My Room',
-    },
   ];
