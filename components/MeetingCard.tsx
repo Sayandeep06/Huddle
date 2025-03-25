@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { Call } from "@stream-io/video-react-sdk";
 import { toast } from "sonner";
 import Members from "./Members";
+import callIcon from "@/public/assets/join.png"
 
 interface MeetingCardProps {
   title: string;
@@ -33,7 +34,7 @@ const MeetingCard = ({
   buttonText,
 }: MeetingCardProps) => {
   return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-3xl bg-blue-200 px-5 py-8 xl:max-w-[568px] text-black scale-90 shadow-2xl">
+    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-2xl bg-blue-200 px-5 py-8 xl:max-w-[568px] text-black scale-90 shadow-xl">
       <article className="flex flex-col gap-5">
         <Image src={icon} alt="upcoming" width={28} height={28} />
         <div className="flex justify-between">
@@ -47,12 +48,12 @@ const MeetingCard = ({
         <div>{type === 'ended' && <Members call={call}/>}</div>
         {!isPreviousMeeting && (
           <div className="flex gap-5">
-            <Button onClick={handleClick} className="rounded bg-blue-700 p-4 hover:bg-blue-400 px-6">
+            <Button onClick={handleClick} className="rounded bg-blue-700 p-4 cursor-pointer hover:bg-blue-400 px-6">
               {buttonIcon1 && <Image src={buttonIcon1} alt="feature" width={20} height={20} />}
               &nbsp; {buttonText}
             </Button>
             <Button
-              className="bg-gray-700"
+              className="bg-gray-700 cursor-pointer"
               onClick={() => {
                 navigator.clipboard.writeText(link);
                 toast("Link Copied",{

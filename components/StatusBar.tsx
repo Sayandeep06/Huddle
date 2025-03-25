@@ -52,7 +52,7 @@ const StatusBar = () => {
       <DateAndTime/>
 
       <Image 
-        src='/bluezoom.jpg' 
+        src='/assets/bluezoom.jpg' 
         width={400} 
         height={400} 
         alt="home image" 

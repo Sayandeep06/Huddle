@@ -61,7 +61,7 @@ const MeetingSetup = ({
             <h1 className="text-center text-2xl font-bold">Meeting Setup</h1>
               <VideoPreview />
             <div className="flex h-16 items-center justify-center gap-3">
-              <label className="flex items-center justify-center gap-2 font-medium">
+              <label className="flex items-center cursor-pointer justify-center gap-2 font-medium">
                 <input
                   type="checkbox"
                   checked={isMicCamToggled}
@@ -73,7 +73,7 @@ const MeetingSetup = ({
               
             </div>
             <Button
-              className="rounded-3xl bg-blue-500 p-6 hover:bg-blue-800 hover:scale-125 transition ease-in-out delay-150 duration-300"
+              className="rounded-3xl cursor-pointer bg-blue-500 p-6 hover:bg-blue-800 hover:scale-125 transition ease-in-out delay-150 duration-300"
               onClick={() => {
                 call.join();
                 call.updateCallMembers({

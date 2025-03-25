@@ -20,4 +20,9 @@ export const navLinks = [
       route: '/recordings',
       label: 'Recordings',
     },
+    {
+      imgURL: '/assets/call.svg',
+      route: '/my-room',
+      label: 'Ongoing Call',
+    },
   ];
