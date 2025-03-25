@@ -53,12 +53,12 @@ const MyRoomPage = () => {
       </div>
       
       <div className="flex gap-5">
-        <Button className="rounded bg-blue-700 p-4 hover:bg-blue-400 px-6" onClick={startRoom}>
+        <Button className="rounded bg-blue-700 p-4 hover:bg-blue-400 px-6 cursor-pointer" onClick={startRoom}>
           Start Meeting
         </Button>
         
         <Button
-          className="bg-gray-700"
+          className="bg-gray-700 cursor-pointer"
           onClick={() => {
             navigator.clipboard.writeText(meetingLink);
             toast("Link Copied",{
