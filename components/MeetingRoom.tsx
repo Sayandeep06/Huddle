@@ -39,9 +39,9 @@ const MeetingRoom = () => {
       return (
         <section className="relative h-screen w-full overflow-hidden pt-4 text-white">
 
-            <Button className='ml-5  font-semibold bg-gray-900 hover:scale-110 rounded-3xl'
+            <Button className='ml-5 cursor-pointer font-semibold bg-gray-900 hover:scale-110 rounded-3xl'
                 onClick={() => {
-                    const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`
+                    const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL || window.location.origin}${pathname}`;
                     navigator.clipboard.writeText(meetingLink);
                     toast('Meeting Link Copied',{ 
                     duration: 3000,
